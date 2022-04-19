@@ -1,0 +1,125 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --Staranddail: #3ea369;
+  --button: #2bcc6e;
+}
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.up {
+  text-align: center;
+  display: grid;
+  height: 100vh;
+  align-items: start;
+}
+.tit {
+  align-self: end;
+  margin-bottom: 30px;
+}
+h3 {
+  color: var(--Staranddail);
+}
+.all {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+img {
+  width: 300px;
+}
+.box {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+
+  display: grid;
+  justify-content: center;
+  gap: 15px;
+  box-shadow: 0 0 10px 0 #00000052;
+}
+.fa-star:before {
+  content: "\f005";
+  color: var(--Staranddail);
+}
+.fa-star-half-alt:before,
+.fa-star-half-stroke:before {
+  content: "\f5c0";
+  color: var(--Staranddail);
+}
+button {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-radius: 1px;
+  background-color: var(--button);
+  cursor: pointer;
+}
+span {
+  font-weight: 700;
+  margin-right: 10px;
+  color: var(--Staranddail);
+}
+@media (min-width: 1100px) {
+  .all {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+  .box {
+    width: 300px;
+    height: 330px;
+  }
+  span {
+    font-size: 20px;
+  }
+  button {
+    width: 120px;
+    height: 45px;
+  }
+}
+@media (max-width: 999px) {
+  .all {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+@media (min-width: 320px) and (max-width: 980px) {
+  body {
+    font-size: 25px;
+  }
+  .up {
+    height: 140vh;
+  }
+  .all {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+  }
+  .box {
+    width: 500px;
+    height: 370px;
+  }
+  .fa-star:before {
+    font-size: 30px;
+  }
+  .fa-star-half-alt:before,
+  .fa-star-half-stroke:before {
+    font-size: 30px;
+  }
+  button {
+    width: 160px;
+    height: 60px;
+    font-size: 20px;
+  }
+  span {
+    font-size: 30px;
+  }
+}
